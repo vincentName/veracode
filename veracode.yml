@@ -36,7 +36,7 @@ veracode_sast_policy_scan:
   push:
     trigger: true
     branches_to_run:
-       - "*"
+      - default_branch
     branches_to_exclude:
   pull_request:
     trigger: true
