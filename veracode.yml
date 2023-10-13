@@ -20,9 +20,9 @@ veracode_sast_pipeline_scan:
     commands:
       - "Veracode"
   #If the break_build_policy_findings is set to true, the build will break if the pipeline scan finds any policy violations.      
-  break_build_policy_findings: false
+  break_build_policy_findings: true
   #If the break_build_on_error is set to true, the build will break if the scan failed to complete in time or with an error.
-  break_build_on_error: false
+  break_build_on_error: true
   #If the break_build_on_policy_error is set to true, this is the error message that will be displayed if the pipeline scan fails to complete in time or with an error.
   error_message: "Veracode SAST scan faced a problem. Please contact your Veracode administrator for more information. If you are a Veracode administrator, please contact Veracode support."
   policy: 'Veracode Recommended Medium + SCA'
@@ -66,7 +66,7 @@ veracode_sca_scan:
   # pull request event. Specifying both will only execute push event.
   # Leaving them both false means this will never run
   push:
-    trigger: true
+    trigger: false
     branches_to_run:
       - "*"
     branches_to_exclude:
